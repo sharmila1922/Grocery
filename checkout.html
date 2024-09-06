@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+</head>
+<body>
+    <div class="checkout-header">
+      <div class="header-content">
+          <div class="checkout-header-left-section"></div>
+          <div class="checkout-header-middle-section">
+              Checkout (<span class="return-to-home-link"></span> <span class="items-text">items</span>)
+          </div>
+          <div class="checkout-header-right-section">
+              <!-- Optional right section content -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="page-title mb-4">Review your order</div>
+
+      <div class="row">
+          <div class="col-lg-8 col-md-12">
+              <div class="order-summary js-order-summary"></div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="payment-summary">
+                <div class="payment-summary-title">Order Summary</div>
+                <div class="payment-summary-row">
+                    <div>Items:</div>
+                    <div class="payment-summary-money total-items-price">₹0.00</div>
+                </div>
+                <div class="payment-summary-row">
+                    <div>Shipping & handling:</div>
+                    <div class="payment-summary-money shipping-cost">₹0.00</div>
+                </div>
+                <div class="payment-summary-row">
+                    <div>Estimated tax (10%):</div>
+                    <div class="payment-summary-money estimated-tax">₹0.00</div>
+                </div>
+                <div class="payment-summary-row total-row">
+                    <div>Order total:</div>
+                    <div class="payment-summary-money order-total">₹0.00</div>
+                </div>
+                <!-- Add the checkbox for cash on delivery -->
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="cashOnDelivery">
+                    <label class="form-check-label" for="cashOnDelivery">Cash on Delivery</label>
+                </div>
+                <!-- Add a button for placing the order -->
+                <button class="btn btn-primary btn-lg place-order-button" disabled>Place Order</button>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Order Status</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Order placed successfully!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="scripts/checkout.js"></script>
+</body>
+</html>
